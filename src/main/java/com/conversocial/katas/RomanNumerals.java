@@ -15,6 +15,12 @@ public class RomanNumerals {
     public static String convert(int number) {
         if (number==1) {
             return "I";
+        } else if (number<=3 && number>0) {
+            return "I"+convert(number-1);
+        } else if (number==4) {
+            return "IV";
+        } else if (number==5) {
+            return "V";
         } else if (number==7) {
             return "VII";
         } else if (number==10) {
